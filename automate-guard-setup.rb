@@ -3,24 +3,41 @@ require 'pp'
 def modify_gemfile
   append_to_gemfile = <<-all_done
 
-# BEGIN added by guard-setup.rb
-group :development do
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'pry', '0.9.12'
-end
-# END
-all_done
+  # BEGIN added by guard-setup.rb
+  group :development do
+    gem 'guard'
+    gem 'guard-rspec'
+    gem 'pry', '0.9.12'
+  end
+  # END
+  all_done
 
-  File.open("Gemfile", "r+") do |gemfile|
-    # p gemfile
-    re = Regexp.new append_to_gemfile
-    gemfile_s = gemfile.read
-    if re.match(gemfile_s) == nil
-      gemfile.puts append_to_gemfile
-    else
-      puts "Gemfile already modified!"
+  vanilla_gemfile = <<-all_done
+  source "http://rubygems.org"
+
+  gem 'rspec', '~> 3.2'
+
+  # BEGIN added by guard-setup.rb
+  group :development do
+    gem 'guard'
+    gem 'guard-rspec'
+    gem 'pry', '0.9.12'
+  end
+  # END
+  all_done
+  if File.file?("Gemfile")
+    File.open("Gemfile", "r+") do |gemfile|
+      # p gemfile
+      re = Regexp.new append_to_gemfile
+      gemfile_s = gemfile.read
+      if re.match(gemfile_s) == nil
+        gemfile.puts append_to_gemfile
+      else
+        puts "Gemfile already modified!"
+      end
     end
+  else
+    File.open("Gemfile", 'w') { |file| file.write(vanilla_gemfile) }
   end
 
   puts "modify_gemfile done..."
@@ -64,7 +81,7 @@ end
 def bundle_stuff
   `rm -f Gemfile.lock`
   puts "Gemfile.lock done..."
-  
+
   `bundle install --binstubs`
   puts "bundle install --binstubs done..."
 
