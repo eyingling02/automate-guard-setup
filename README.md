@@ -15,7 +15,7 @@ $ pwd
 /Users/max/repos
 $ git clone https://github.com/mbigras/automate-guard-setup.git
 ```
-* You should **copy** (that is **not move**) the `automate-guard-setup.rb` file into you project's directory.
+* **copy** (that is **not move**) the `automate-guard-setup.rb` file into you project's directory.
 
 ```
 $ pwd                           
