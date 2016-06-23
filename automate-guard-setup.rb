@@ -26,7 +26,7 @@ all_done
   puts "modify_gemfile done..."
 end
 
-modify_gemfile
+# modify_gemfile
 
 def move_ruby_files_into_lib
   `mkdir -p lib`
@@ -38,7 +38,7 @@ def move_ruby_files_into_lib
   puts "move_ruby_files_into_lib done..."
 end
 
-move_ruby_files_into_lib
+# move_ruby_files_into_lib
 
 def modify_spec_files
   Dir.glob('./spec/*_spec.rb') do |spec_file_name_s|
@@ -58,7 +58,7 @@ def modify_spec_files
   end
 end
 
-modify_spec_files
+# modify_spec_files
 
 
 def bundle_stuff
@@ -77,7 +77,7 @@ def bundle_stuff
   puts "bundle_stuff done..."
 end
 
-bundle_stuff
+# bundle_stuff
 
 def modify_guardfile
   guard_config = "Guardfile"
@@ -89,4 +89,15 @@ def modify_guardfile
   puts "modify_guardfile done..."
 end
 
+# modify_guardfile
+
+
+# Run methods
+modify_gemfile
+move_ruby_files_into_lib
+modify_spec_files
+bundle_stuff
 modify_guardfile
+puts "installation and configuation complete..."
+puts "to start guard, execute the following command:"
+puts "bundle exec guard --clear"
