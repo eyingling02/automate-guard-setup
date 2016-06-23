@@ -1,9 +1,9 @@
 # Automate Guard-RSpec setup for DBC Challenges
 #### What is guard-rspec?
-[guard-rspec](https://github.com/guard/guard-rspec) is a tool that automatically runs your [RSpec](https://github.com/rspec/rspec) tests. It's a plugin for [guard](https://github.com/guard/guard-rspec) which is a command line tool that handles events on file system modifications. In plain english, when configured properly, `guard-rspec` will run your unit tests any time you modify your ruby files or your spec files.
+[guard-rspec](https://github.com/guard/guard-rspec) is a tool that automatically runs your [RSpec](https://github.com/rspec/rspec) tests. It's a plugin for [guard](https://github.com/guard/guard-rspec), a command line tool that handles events on file system modifications. In plain english, when configured properly, `guard-rspec` will run your unit tests any time you modify your ruby files or your spec files. It's ahhsum jelleh man.
 
 #### Installation in general
-If you're interested you can check out each of these tools and read through the documentation to figure out how to set them up. It takes some effort and it's worth your time but...it's not that easy. Further, all we really want for now is a way to quickly be able to get it to "just work". This is what `automate-guard-setup.rb` is all about.
+If you're interested you can check out each of these tools and read through the documentation to figure out how to set them up. It takes some effort and it's worth your time but...it's not that easy. Also, all we really want for now is a way to quickly get it to "just work". This is what `automate-guard-setup.rb` is all about.
 
 #### Installation for us
 * Clone this repo onto your machine and pull as I update it. For example:
