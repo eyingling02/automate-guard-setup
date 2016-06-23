@@ -1,11 +1,13 @@
 # Automate Guard-RSpec setup for DBC Challenges
 #### What is guard-rspec?
-[guard-rspec](https://github.com/guard/guard-rspec) is a tool that automatically runs your [RSpec](https://github.com/rspec/rspec) tests. It's a plugin for [guard](https://github.com/guard/guard-rspec) which is a command line tool that handles events on file system modifications. In plain english, when configured properly, `guard-rspec` will run your unit tests any time you modify your ruby files or your spec files.
+[guard-rspec](https://github.com/guard/guard-rspec) is a tool that automatically runs your [RSpec](https://github.com/rspec/rspec) tests. It's a plugin for [guard](https://github.com/guard/guard-rspec), a command line tool that handles events on file system modifications. In plain english, when configured properly, `guard-rspec` will run your unit tests any time you modify your ruby files or your spec files. It's ahhsum jelleh man :turtle:
 
 #### Installation in general
-If you're interested you can check out each of these tools and read through the documentation to figure out how to set them up. It takes some effort and it's worth your time but...it's not that easy. Further, all we really want for now is a way to quickly be able to get it to "just work". This is what `automate-guard-setup.rb` is all about.
+If you're interested you can check out each of these tools and read through the documentation to figure out how to set them up. It takes some effort and it's worth your time but...it's not that easy. Also, all we really want for now is a way to quickly get it to "just work". This is what `automate-guard-setup.rb` is all about.
 
 #### Installation for us
+Alright, we're going to have a great jump today, just:
+
 * Clone this repo onto your machine and pull as I update it. For example:
 
 ```
@@ -69,7 +71,7 @@ bundle exec guard --clear
 --add more details here-- but for now, feel free to browse through `automate-guard-setup.rb`
 
 #### Tips
-* If you think typing out `bundle exec guard --clear` every time you want to start `guard` is a pain, you're not alone. You can add an alias to your `.bashrc` file. For example, I've aliased the command `guard` to run `bundle exec guard --clear`
+* If you think typing out `bundle exec guard --clear` every time you want to start `guard` is a pain, you're not alone. You can add an alias to your `.bash_profile` file. For example, I've aliased the command `guard` to run `bundle exec guard --clear`
 
 ```
 alias guard="bundle exec guard --clear"
