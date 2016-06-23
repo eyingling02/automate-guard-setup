@@ -6,6 +6,8 @@
 If you're interested you can check out each of these tools and read through the documentation to figure out how to set them up. It takes some effort and it's worth your time but...it's not that easy. Also, all we really want for now is a way to quickly get it to "just work". This is what `automate-guard-setup.rb` is all about.
 
 #### Installation for us
+Alright, we're going to have a great jump today, just:
+
 * Clone this repo onto your machine and pull as I update it. For example:
 
 ```
