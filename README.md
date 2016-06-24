@@ -71,11 +71,13 @@ bundle exec guard --clear
 --add more details here-- but for now, feel free to browse through `automate-guard-setup.rb`
 
 #### Tips
-* If you think typing out `bundle exec guard --clear` every time you want to start `guard` is a pain, you're not alone. You can add an alias to your `.bash_profile` file. For example, I've aliased the command `guard` to run `bundle exec guard --clear`
+* If you think typing out `bundle exec guard --clear` every time you want to start `guard` is a pain, you're not alone. You can add an alias in your `.bash_profile` file. For example, I've aliased the command `guard` to run `bundle exec guard --clear`
 
 ```
 alias guard="bundle exec guard --clear"
 ```
+
+* You can use `automate-guard-setup.rb` to use `guard-rspec` in an empty project also
 
 
 
